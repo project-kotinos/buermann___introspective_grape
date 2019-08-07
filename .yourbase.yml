@@ -9,7 +9,6 @@ build_targets:
     environment:
       - JRUBY_OPTS="-J-Xmx1024m --debug"
     commands:
-      - gem install bundler -v 1.17.3
       - chmod +x yourbased.sh
       - ./yourbased.sh
 
