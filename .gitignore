@@ -11,3 +11,5 @@ spec/dummy/tmp/
 spec/dummy/public/system/
 spec/dummy/.sass-cache
 coverage/*
+# add gemfile locks to .gitignore
+gemfiles/*.lock
