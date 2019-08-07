@@ -17,3 +17,5 @@ ci:
   builds:
     - name: tests
       build_target: default
+
+#trivial commit
