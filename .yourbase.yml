@@ -6,39 +6,43 @@ dependencies:
 build_targets:
   - name: rails-5.master
     container: 
-      image: yourbase/yb_ubuntu_ng:18.04
+      image: yourbase/yb_ubuntu_ng_1:18.04
     environment:
       - JRUBY_OPTS="-J-Xmx1024m --debug"
+      - BUNDLE_GEMFILE=./gemfiles/Gemfile.rails.5.master
     commands:
       - gem install bundler -v 1.17.3 
-      - bundle install -j4 --gemfile ./gemfiles/Gemfile.rails.5.master
+      - bundle install -j4
       - bundle exec rspec
   - name: rails-5.0.1
     container: 
-      image: yourbase/yb_ubuntu_ng:18.04
+      image: yourbase/yb_ubuntu_ng_1:18.04
     environment:
       - JRUBY_OPTS="-J-Xmx1024m --debug"
+      - BUNDLE_GEMFILE=./gemfiles/Gemfile.rails.5.0.1
     commands:
       - gem install bundler -v 1.17.3 
-      - bundle install -j4 --gemfile ./gemfiles/Gemfile.rails.5.0.1
+      - bundle install -j4 
       - bundle exec rspec
   - name: rails-5.1.0
     container: 
-      image: yourbase/yb_ubuntu_ng:18.04
+      image: yourbase/yb_ubuntu_ng_1:18.04
     environment:
       - JRUBY_OPTS="-J-Xmx1024m --debug"
+      - BUNDLE_GEMFILE=./gemfiles/Gemfile.rails.5.1.0
     commands:
       - gem install bundler -v 1.17.3 
-      - bundle install -j4 --gemfile ./gemfiles/Gemfile.rails.5.1.0
+      - bundle install -j4 
       - bundle exec rspec
   - name: rails-5.2.0
     container: 
-      image: yourbase/yb_ubuntu_ng:18.04
+      image: yourbase/yb_ubuntu_ng_1:18.04
     environment:
       - JRUBY_OPTS="-J-Xmx1024m --debug"
+      - BUNDLE_GEMFILE=./gemfiles/Gemfile.rails.5.2.0
     commands:
       - gem install bundler -v 1.17.3 
-      - bundle install -j4 --gemfile ./gemfiles/Gemfile.rails.5.2.0
+      - bundle install -j4 
       - bundle exec rspec
 ci:
   builds:
