@@ -9,7 +9,7 @@ build_targets:
       image: yourbase/yb_ubuntu_ng_1:18.04
     environment:
       - JRUBY_OPTS="-J-Xmx1024m --debug"
-      - BUNDLE_GEMFILE=./gemfiles/Gemfile.rails.5.master
+      - BUNDLE_GEMFILE="./gemfiles/Gemfile.rails.5.master"
     commands:
       - gem install bundler -v 1.17.3 
       - bundle install -j4
@@ -19,7 +19,7 @@ build_targets:
       image: yourbase/yb_ubuntu_ng_1:18.04
     environment:
       - JRUBY_OPTS="-J-Xmx1024m --debug"
-      - BUNDLE_GEMFILE=./gemfiles/Gemfile.rails.5.0.1
+      - BUNDLE_GEMFILE="./gemfiles/Gemfile.rails.5.0.1"
     commands:
       - gem install bundler -v 1.17.3 
       - bundle install -j4 
@@ -29,7 +29,7 @@ build_targets:
       image: yourbase/yb_ubuntu_ng_1:18.04
     environment:
       - JRUBY_OPTS="-J-Xmx1024m --debug"
-      - BUNDLE_GEMFILE=./gemfiles/Gemfile.rails.5.1.0
+      - BUNDLE_GEMFILE="./gemfiles/Gemfile.rails.5.1.0"
     commands:
       - gem install bundler -v 1.17.3 
       - bundle install -j4 
@@ -39,7 +39,7 @@ build_targets:
       image: yourbase/yb_ubuntu_ng_1:18.04
     environment:
       - JRUBY_OPTS="-J-Xmx1024m --debug"
-      - BUNDLE_GEMFILE=./gemfiles/Gemfile.rails.5.2.0
+      - BUNDLE_GEMFILE="./gemfiles/Gemfile.rails.5.2.0"
     commands:
       - gem install bundler -v 1.17.3 
       - bundle install -j4 
