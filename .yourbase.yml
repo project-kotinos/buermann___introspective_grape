@@ -1,3 +1,4 @@
+# Note -- this requires the `file` utility... because paperclip
 dependencies:
   build:
     - ruby:2.5.0
@@ -9,8 +10,9 @@ build_targets:
     environment:
       - JRUBY_OPTS="-J-Xmx1024m --debug"
     commands:
-      - chmod +x yourbased.sh
-      - ./yourbased.sh
+      - gem install bundler -v 1.17.3 
+      - bundle install -j4
+      - bundle exec rspec
 
 ci:
   builds:
