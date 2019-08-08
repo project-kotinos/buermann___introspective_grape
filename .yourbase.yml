@@ -4,14 +4,14 @@ dependencies:
     - ruby:2.5.0
 
 build_targets:
-  - name: rails-5.0.0
+  - name: rails-5.master
     container: 
       image: yourbase/yb_ubuntu_ng:18.04
     environment:
       - JRUBY_OPTS="-J-Xmx1024m --debug"
     commands:
       - gem install bundler -v 1.17.3 
-      - bundle install -j4 --gemfile ./gemfiles/Gemfile.rails.5.0.0
+      - bundle install -j4 --gemfile ./gemfiles/Gemfile.rails.5.master
       - bundle exec rspec
   - name: rails-5.0.1
     container: 
@@ -42,11 +42,11 @@ build_targets:
       - bundle exec rspec
 ci:
   builds:
-    - name: test-rails-5.0.0
-      build_target: rails-5.0.0
     - name: test-rails-5.0.1
       build_target: rails-5.0.1
     - name: test-rails-5.1.0
       build_target: rails-5.1.0
     - name: test-rails-5.2.0
       build_target: rails-5.2.0
+    - name: test-rails-5.master
+      build_target: rails-5.master
