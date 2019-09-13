@@ -3,9 +3,11 @@ source 'https://rubygems.org'
 gemspec :path => '../'
 
 gem 'rails', '5.0.1'
-gem 'grape', '< 1.0.0'
+gem 'grape'
+gem 'grape-kaminari', :github => 'alexey-klimuk/grape-kaminari'
 gem 'grape-swagger'
 gem 'nokogiri'
+gem 'tzinfo-data'
 gem 'coveralls', require: false
 
 group :development,:test do
